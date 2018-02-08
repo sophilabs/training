@@ -55,12 +55,12 @@ If you feel so and you have time consider doing the following activities related
 
 ### Deployment
 
-- Use [containerization](https://en.wikipedia.org/wiki/Operating-system-level_virtualization) through [Docker](https://www.docker.com/) to isolate your web server and database.
- ![Diagram of containers for the project](containers.png)
- A good starting point can be having 3 containers:
- * A Frontend Server, which hosts a [Single Page Application](https://www.kirupa.com/react/creating_single_page_app_react_using_react_router.htm) and makes calls to a Backend Server to do any operation with the system.
- * A Backend Server, which exposes an API for operating with the system. It can contain the Admin Site to approve users.
- * A Database Server to store persistent data, using PostgreSQL or another database engine of your choice.
+![Diagram of containers for the project](containers.png)
+
+- Use [containerization](https://en.wikipedia.org/wiki/Operating-system-level_virtualization) through [Docker](https://www.docker.com/) to isolate your web server and database.  A good starting point can be having 3 containers:
+  * A Frontend Server, which hosts a [Single Page Application](https://www.kirupa.com/react/creating_single_page_app_react_using_react_router.htm) and makes calls to a Backend Server to do any operation with the system.
+  * A Backend Server, which exposes an API for operating with the system. It can contain the Admin Site to approve users.
+  * A Database Server to store persistent data, using PostgreSQL or another database engine of your choice.
 - *Deploy* your project to be available publicly on [Amazon Web Services](http://aws.amazon.com/), [Heroku](https://www.heroku.com/) or a similar service.
 
 
