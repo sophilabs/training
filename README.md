@@ -1,71 +1,70 @@
 # Ticketing System
 
+![A ticket system icon](icon.png)
+
 ## Purpose
 
-The purpose of this assignment is to evaluate the candidate’s designing and development abilities.
+The purpose of this assignment is to evaluate the candidate/apprentice designing and development abilities.
 
 ## Deliverable
 
-Code published on Github or Bitbucket.
+Code published on public [Github](http://github.com/) or [Bitbucket](https://bitbucket.org/) repository. Deadline is 7 days after assignment is sent to the candidate.
 
-Deadline is 7 days after assignment is sent to the candidate.
+## Technologies
 
-## Requirements
+You can use any technology you feel proficient with. We propose using [Django](https://www.djangoproject.com/) for the Backend, [React](https://reactjs.org/) for the frontend, and [PostgreSQL](http://postgresql.org/) for the database.
 
-- Build a web based ticketing system.
-- Administrator validate users.
-- Users login to the system and go to their dashboard.
-- The dashboard shows a list of tickets assigned to the user.
-- Tickets can be created, edited and closed.
-- They can also be assigned to another user.
-- If the ticket is closed, it will no longer appear in the dashboard by default.
-- If the ticket is assigned, it will show only to the assigned user by default.
-- The dashboard will allow to show all tickets including closed ones.
+## Project information
 
-## Models
+This project consist in building a web based ticketing system, where users can upload tickets and distribute work among project teammates.
 
-- User
+The system manages two types of entities: Users and Tickets.
 
-  - email
-  - password
-  - name
+For the users the system knows about, their email, their password, which should be stored securely in the database and their full name.
 
-- Ticket
+For the tickets the system stores their title, the description , it's status (which can be either *open* or *closed*), the creation date. Also for each ticket the system stores the Author and the Assignee both of them are User entities.
 
-  - title
-  - body
-  - status (open, closed)
-  - author (User)
-  - assignee (User)
-  - created (date)
+## Specific requirements
+
+### Registration and approval
+Users have to request to register to the site. Upon request, a system administrator have to approve their request for them to be able to use the site.
+
+### Dashboard and ticket management
+
+When the user log in they are redirected to their Dashboard, which shows a list of tickets assigned to that user. Tickets can be created, edited, closed or assigned to another user. If the ticket is closed, it will no longer appear in the dashboard by default. If the ticket is assigned, it will show only to the assigned user. The dashboard will allow to show all tickets including closed ones.
 
 ## Pages
 
-- Register
+We propose a site structure the picture below, having a separate site for using the Ticket system, and another special page for admistrators for the purpose of approving users.
 
-- Login
+![Ticket system sitemap](sitemap.png)
 
-- Dashboard
+You can adapt the schema, as long as the site provides following pages:
 
-  - filters: title, status
-  - actions: create tickets, edit tickets, delete ticket
+- Register Page, where users can register. They have to wait until an admisitrator authorizes them to enter again.
+- Login page to enter the Dashboard
+- Dashboard page containing a ticket list and
+  - Filters: by title and status
+  - Individual actions: Create a ticket, edit a ticket, and delete a ticket
+- Ticket creation page, where the user can enter the following information
+  - Title, body, status and assignee are editable.
+  - Status is open by default.
+  - Creation date is read only and set to the browser date.
+  - Author is read only and is set to the logged in user.
+  - Assignee is the logged in user by default but you can change it selecting from a list of users.
+- Ticket details page, where the user can see and edit the ticket status, body and title.
 
-- Ticket: create
+### Hints
 
-  - title, body, status and assignee are editable
-  - status is open by default
-  - dates read only and self by default
-  - author is read only and self by default
-  - assignee self by default but you can change it from a list of users
+* If you use Django, you can use the built in [Admin site](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/) page for implementing this in another framewoerk consider using an Admin Site for this instead of crafting a page specifically for this.
+* The landing page can have the login page included.
 
-- Ticket: edit
+## Optional Requirements
 
-  - title, body, status and assignee are editable
+- Use Sophilabs' *[guidelines](https://sophilabs.co/guidelines/)* to improve the code.
+- *[Unit Test](https://en.wikipedia.org/wiki/Unit_testing)* coverage above 90% both frontend and backend.
+- Use [containerization](https://en.wikipedia.org/wiki/Operating-system-level_virtualization) through [Docker](https://www.docker.com/) to isolate your web server and database.
+- *Deploy* your project on [Amazon Web Services](http://aws.amazon.com/), [Heroku](https://www.heroku.com/) or a similar service.
 
-## Optional
-
-- Use Sophilabs' guidelines to improve the code.
-- Unit test coverage above 90%.
-- Deploy your project on heroku or similar.
 
 **Good luck!**
