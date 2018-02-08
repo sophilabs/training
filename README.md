@@ -47,7 +47,7 @@ You can adapt the schema, as long as the site provides following pages:
 
 ## Optional Requirements
 
-If you feel so, you have time consider doing the following activities.
+If you feel so and you have time consider doing the following activities related to code quality, testing and deployment.
 
 ### Code Quality
 - Use Sophilabs' *[guidelines](https://sophilabs.co/guidelines/)* to improve the code.
