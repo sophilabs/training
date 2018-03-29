@@ -1,9 +1,5 @@
 # Ticketing System
 
-![A ticket system icon](icon.png)
-
-## Project information
-
 This project consist in building a web based ticketing system, where users can upload tickets and distribute
 work among project teammates. The system manages two types of entities: Users and Tickets. For the users
 the system knows about, their email, their password, which should be stored securely in the database
