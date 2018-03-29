@@ -1,6 +1,4 @@
-# Sophilabs training exercises
-
-## Introduction
+# Training Exercises
 
 The purpose of this exercise is to evaluate the candidate and apprentice designing and development abilities.
 We expect the code published on public [Github](http://github.com/) or [Bitbucket](https://bitbucket.org/)
