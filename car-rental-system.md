@@ -1,4 +1,4 @@
-# Car rental System
+# Car Rental System
 
 ## Project information
 
