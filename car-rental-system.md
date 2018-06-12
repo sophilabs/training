@@ -2,8 +2,8 @@
 
 ## Project Information
 
-This project consists of building a car rental web system where users can upload new clients and
-rent their cars. The system manages three types of entities: Users, Clients, and Cars. The system knows
+This project consists of building a car rental web system where users can rent out their cars to clients.
+The system manages three types of entities: Users, Clients, and Cars. The system knows
 the following information about the users: their email, their password (which should be stored securely
 in the database), and their full name.
 For the clients, the system stores: their name, their drivers license number, and a phone number.
